@@ -1,0 +1,171 @@
+.logo{
+    width: 800px ;
+    height: 250px;
+}
+
+.bienvenu_text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(255, 210, 210);
+    color: rgb(92, 92, 92);
+    margin-bottom: 30px;
+}
+
+
+
+
+.menulaitier{
+    border-radius: 30px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+}
+
+
+.viande_menu, .fruit_menu, .cereale_menu, .laitier_menu {
+    border-radius: 30px;
+    width: 500px;
+    height: 400px;
+   
+}
+
+.viande_menu{
+    padding: 40px;
+    padding-left: 40%;
+    background-color: rgb(237, 162, 162);
+
+}
+.fruit_menu{
+    padding: 40px;
+    padding-right: 40%;
+    background-color: rgb(142, 231, 142);
+
+}
+.cereale_menu{
+    padding: 40px;
+    padding-left: 40%;
+    background-color: rgb(231, 231, 161);
+
+}
+.laitier_menu{
+    padding: 40px;
+    padding-right: 40%;
+    background-color: rgb(169, 213, 250);
+
+    
+}
+
+
+.titre_produit {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    bottom: 450px;
+}
+
+.description_produit_gauche,.description_produit_droit {
+    font-size: 20px;
+    color: #333333;
+    margin: 0;
+    width: 300px;
+    position:absolute;
+    z-index: 2;
+    color: rgb(63, 63, 63);
+
+}
+
+.description_produit_droit {
+    right: 25%;
+    top: 35%;
+
+}
+.description_produit_gauche{
+    left: 25%;
+    top: 35%;
+}
+
+
+.titre_produit{
+    text-decoration: none;
+    font-weight: bold;
+    position:absolute;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.blabla {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
+
+.bouton_article{
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.bouton_voirmagasin{
+    padding: 30px;
+    color: rgb(250, 234, 114);
+    background-color: #ff4343;
+    border-radius: 30px;
+}
+.bouton_voirmagasin:hover{
+    color: rgb(236, 221, 107);
+    background-color: #e93c3c;
+}
+
+
+
+.bouton_acheteur1{
+    text-decoration: none;
+    font-weight: bold;
+
+    position: relative;
+    margin-bottom: 30px;
+    left: 250px;
+    bottom: 60px;
+}
+
+.bouton_acheteur{
+    padding: 20px;
+    color: rgb(250, 234, 114);
+    background-color: #da3737;
+    border-radius: 30px;
+}
+.bouton_acheteur:hover{
+    color: rgb(236, 221, 107);
+    background-color: #ce3636;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
