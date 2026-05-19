@@ -1,3 +1,99 @@
+good version:
+-- Suppression des tables existantes pour repartir à neuf (dans le bon ordre des clés)
+DROP TABLE Detail_Commande CASCADE CONSTRAINTS;
+DROP TABLE Produit CASCADE CONSTRAINTS;
+DROP TABLE Groupe_Alimentaire CASCADE CONSTRAINTS;
+DROP TABLE Commande CASCADE CONSTRAINTS;
+DROP TABLE Client CASCADE CONSTRAINTS;
+-- 1. Table Client
+
+CREATE TABLE Client ( 
+    client_id           NUMBER NOT NULL, 
+    client_nom          VARCHAR2(150), 
+    client_email        VARCHAR2(150), 
+    client_TypeDeMembre VARCHAR2(150)
+);
+ 
+ALTER TABLE Client 
+    ADD CONSTRAINT Client_PK PRIMARY KEY ( client_id );
+ 
+-- 2. Table Commande
+CREATE TABLE Commande ( 
+    commande_id            NUMBER NOT NULL, 
+    commande_MontantTotale INTEGER, 
+    commande_date          DATE, 
+    mode_recup             VARCHAR2(150) NOT NULL, 
+    Client_client_id       NUMBER NOT NULL 
+);
+ 
+ALTER TABLE Commande 
+    ADD CONSTRAINT Commande_PK PRIMARY KEY ( commande_id );
+ 
+-- 4. Table Groupe Alimentaire
+CREATE TABLE Groupe_Alimentaire ( 
+    groupeAlimentaire_ID  NUMBER NOT NULL, 
+    groupeAlimentaire_nom VARCHAR2(150) 
+);
+ 
+ALTER TABLE Groupe_Alimentaire 
+    ADD CONSTRAINT Groupe_Alimentaire_PK PRIMARY KEY ( groupeAlimentaire_ID );
+ 
+-- 5. Table Produit
+CREATE TABLE Produit ( 
+    produit_ID                NUMBER NOT NULL, 
+    produit_nom               VARCHAR2(150), 
+    produit_prix              NUMBER, 
+    produit_date_arr          DATE, 
+    produit_date_exp          DATE, 
+    produit_quantite          INTEGER, 
+    produit_origine           VARCHAR2(150), 
+    Produit_GP_Alimentaire_ID NUMBER NOT NULL 
+);
+ 
+-- ИСПРАВЛЕНО: Ключ ссылается на существующее поле Produit_GP_Alimentaire_ID
+ALTER TABLE Produit 
+    ADD CONSTRAINT Produit_PK PRIMARY KEY ( produit_ID );
+ 
+-- 3. Detail Commande
+CREATE TABLE Detail_Commande ( 
+    quantite                  INTEGER,
+    Commande_commande_id      NUMBER NOT NULL, 
+    Commande_Client_client_id NUMBER NOT NULL, 
+    Produit_produit_ID        NUMBER NOT NULL, 
+    Produit_GP_Alimentaire_ID NUMBER NOT NULL 
+);
+ 
+-- ИСПРАВЛЕНО: Удалено несуществующее длинное имя поля
+ALTER TABLE Detail_Commande 
+    ADD CONSTRAINT Detail_Commande_PK PRIMARY KEY ( Commande_commande_id, Produit_produit_ID );
+ 
+-- 6. Настройка внешних ключей (FOREIGN KEYS)
+ALTER TABLE Commande 
+    ADD CONSTRAINT Commande_Client_FK FOREIGN KEY ( Client_client_id ) 
+    REFERENCES Client ( client_id );
+ 
+ALTER TABLE Detail_Commande 
+    ADD CONSTRAINT Detail_Commande_Commande_FK FOREIGN KEY ( Commande_commande_id ) 
+    REFERENCES Commande ( commande_id );
+ 
+ALTER TABLE Detail_Commande 
+    ADD CONSTRAINT Detail_Commande_Produit_FK FOREIGN KEY ( Produit_produit_ID ) 
+    REFERENCES Produit ( produit_ID );
+ALTER TABLE Produit 
+    ADD CONSTRAINT Produit_Groupe_Alimentaire_FK FOREIGN KEY ( Produit_GP_Alimentaire_ID ) 
+    REFERENCES Groupe_Alimentaire ( groupeAlimentaire_ID );
+ 
+COMMIT;
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
 -- Généré par Oracle SQL Developer Data Modeler 24.3.1.351.0831
 --   à :        2026-05-19 10:28:16 HAE
 --   site :      Oracle Database 11g
@@ -162,5 +258,9 @@ ALTER TABLE Produit
 -- ORDS ENABLE OBJECT                       0
 -- 
 -- ERRORS                                   4(FIXED)
+
+
+
+
 -- WARNINGS                                 0
 
