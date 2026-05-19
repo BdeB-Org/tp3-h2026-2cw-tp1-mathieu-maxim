@@ -43,12 +43,11 @@ async function handleResponse(response) {
     }).then(handleResponse);
   }
  
-  /*
-  il faut changer pour que sa correspond a un tableau qu' on a
+  
 
-  async function getItemsByPanier(idPanier) {
-    const items = await getAll('item');
-    return items.filter(item => Number(item.id_panier) === Number(idPanier));
+  async function getProduitsByGroupe(idGroupe) {
+    const produits = await getAll('produit');
+    return produits.filter(prod => Number(prod.groupe_alimentaire_groupealimentaire_id) === Number(idGroupe));
   }
-    */
+    
   

@@ -4,6 +4,7 @@
 }
 
 .bienvenu_text {
+    
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -136,11 +137,11 @@
 .bouton_acheteur1{
     text-decoration: none;
     font-weight: bold;
-
-    position: relative;
+    position: absolute;
     margin-bottom: 30px;
-    left: 250px;
-    bottom: 60px;
+    right: 1%;
+    top: 1%;
+    
 }
 
 .bouton_acheteur{
