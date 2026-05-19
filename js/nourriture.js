@@ -11,11 +11,11 @@ function afficherProduits(produits) {
 
   nourritureBody.innerHTML = produits.map(n => `
     <tr>
-      <td>${escapeHtml(n.produit_ID)}</td>
+      <td>${escapeHtml(n.produit_id)}</td>
       <td>${escapeHtml(n.produit_nom)}</td>
       <td>${formatArgent(n.produit_prix)}</td>
-      <td>${escapeHtml(n.produit_date_arr)}</td>
-      <td>${escapeHtml(n.produit_date_exp)}</td>
+      <td>${formatDate(n.produit_date_arr)}</td>
+      <td>${formatDate(n.produit_date_exp)}</td>
       <td>${escapeHtml(n.produit_quantite)}</td>
       <td>${escapeHtml(n.produit_origine)}</td>
     </tr>

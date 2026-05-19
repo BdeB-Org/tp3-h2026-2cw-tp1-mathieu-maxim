@@ -23,4 +23,9 @@ function setMessage(elementId, message, type = '') {
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#039;');
   }
+
+  function formatDate(value) {
+    if (value === null || value === undefined || value === '') return '—';
+    return String(value).split('T')[0];//pour enlever l'informatin inutile dans la date
+  }
   
