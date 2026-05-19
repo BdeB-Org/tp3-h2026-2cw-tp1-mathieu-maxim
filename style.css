@@ -1,283 +1,322 @@
-.logo{
-    width: 800px ;
-    height: 250px;
+:root {
+  --border: #ccc;
+  --primary-dark: #6f2626;
+  --surface: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --success-text: #1b5e20;
+  --success-bg: #e8f5e9;
+  --error-text: #b71c1c;
+  --error-bg: #ffebee;
 }
 
-.bienvenu_text {
-    
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: rgb(255, 210, 210);
-    color: rgb(92, 92, 92);
-    margin-bottom: 30px;
+/* ==========================================================================
+   2. MISE EN PAGE ET CONTENEURS (STRUCTURE)
+   ========================================================================== */
+.container {
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  padding: 0 1rem 2rem;
 }
 
-
-
-
-.menulaitier{
-    border-radius: 30px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    width: 500px;
-    height: 400px;
+.boite-principale {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #feeeee;
 }
 
-
-.viande_menu, .fruit_menu, .cereale_menu, .laitier_menu {
-    border-radius: 30px;
-    width: 500px;
-    height: 400px;
-   
+.boite_affichage {
+  padding: 25px;
+  margin-bottom: 15px;
 }
 
-.viande_menu{
-    padding: 40px;
-    padding-left: 40%;
-    background-color: rgb(237, 162, 162);
-
-}
-.fruit_menu{
-    padding: 40px;
-    padding-right: 40%;
-    background-color: rgb(142, 231, 142);
-
-}
-.cereale_menu{
-    padding: 40px;
-    padding-left: 40%;
-    background-color: rgb(231, 231, 161);
-
-}
-.laitier_menu{
-    padding: 40px;
-    padding-right: 40%;
-    background-color: rgb(169, 213, 250);
-
-    
-}
-
-
-.titre_produit {
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0;
-    position: absolute;
-    bottom: 450px;
-}
-
-.description_produit_gauche,.description_produit_droit {
-    font-size: 20px;
-    color: #333333;
-    margin: 0;
-    width: 300px;
-    position:absolute;
-    z-index: 2;
-    color: rgb(63, 63, 63);
-
-}
-
-.description_produit_droit {
-    right: 25%;
-    top: 35%;
-
-}
-.description_produit_gauche{
-    left: 25%;
-    top: 35%;
-}
-
-
-.titre_produit{
-    text-decoration: none;
-    font-weight: bold;
-    position:absolute;
-    font-size: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-.blabla {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-
-
-.bouton_article{
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.bouton_voirmagasin{
-    padding: 30px;
-    color: rgb(250, 234, 114);
-    background-color: #ff4343;
-    border-radius: 30px;
-}
-.bouton_voirmagasin:hover{
-    color: rgb(236, 221, 107);
-    background-color: #e93c3c;
-}
-
-
-
-.bouton_acheteur1{
-    text-decoration: none;
-    font-weight: bold;
-    position: absolute;
-    margin-bottom: 30px;
-    right: 1%;
-    top: 1%;
-    
-}
-
-.bouton_acheteur{
-    padding: 20px;
-    color: rgb(250, 234, 114);
-    background-color: #da3737;
-    border-radius: 30px;
-}
-.bouton_acheteur:hover{
-    color: rgb(236, 221, 107);
-    background-color: #ce3636;
-}
-
-
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.85rem;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border:#333333; /* rien live */
-}
-
-th, td {
-  padding: 0.8rem;
-  border-bottom: 1px solid var(--border);
-  text-align: left;
-  vertical-align: top;
-}
-
-th {
-  background: rgb(255, 210, 210);
-  color: var(--primary-dark);
+.card {
+  background-color: rgb(252, 232, 232);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
   
 }
+
 .toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
-}
-.container {
-  max-width: 1200px;
-  margin: 1.5rem auto;
-  padding: 0 1rem 2rem;
   
 }
 
-.card {
-  background: var(--surface);
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  padding: 1.25rem;
-  margin-bottom: 1.25rem;
-  background-color: rgb(252, 232, 232)
-
+.entre_chercher_actualiser {
+  display: flex;
+  gap: 10px;
 }
-.table-wrapper { overflow-x: auto; }
 
+/* ==========================================================================
+   3. EN-TÊTE, TEXTES ET LOGO
+   ========================================================================== */
+.logo {
+  width: 800px;
+  height: 250px;
+}
+
+.bienvenu_text {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(255, 210, 210);
+  color: rgb(92, 92, 92);
+  margin-bottom: 30px;
+}
+
+.blabla {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* ==========================================================================
+   4. ELEMENTS DE FORMULAIRE (INPUTS, SELECT, BUTTONS)
+   ========================================================================== */
+input, select, button {
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px 30%;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: rgb(214, 91, 91);
+  color: rgb(255, 251, 204);
+}
+
+button:hover { 
+  background-color: rgb(187, 79, 79);
+}
+
+/* Formulaire en grille flexible */
 .form-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  
 }
 
-.form-grid input, .form-grid select {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    flex: 1;
-    min-width: 200px;
+.form-grid input, 
+.form-grid select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
 }
 
 .form-grid button {
-    padding: 10px 20px;
-    background-color: #ff4343;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
+  padding: 10px 20px;
+  background-color: #ff4343;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .form-grid button:hover {
-    background-color: #e93c3c;
+  background-color: #e93c3c;
+}
+
+/*5. TABLEAUX (TABLES)*/
+.table-wrapper { 
+  overflow-x: auto; 
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff; /* Fond blanc pour l'intérieur du tableau */
+  border: 2px solid #ffb3b3;
+}
+
+th {
+  background: rgb(255, 210, 210);
+  color: var(--primary-dark);
+  font-weight: bold;
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ffb3b3; /* Bordure rose plus foncée entre les entêtes */
+}
+
+td {
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+  border: 1px solid #f0c5c5;
+}
+
+/* ==========================================================================
+   6. BOUTONS SPECIFIQUES & LIENS D'ACTION
+   ========================================================================== */
+.bouton_article {
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.bouton_voirmagasin {
+  padding: 30px;
+  color: rgb(250, 234, 114);
+  background-color: #ff4343;
+  border-radius: 30px;
+}
+
+.bouton_voirmagasin:hover {
+  color: rgb(236, 221, 107);
+  background-color: #e93c3c;
+}
+
+.bouton_acheteur1 {
+  text-decoration: none;
+  font-weight: bold;
+  position: absolute;
+  margin-bottom: 30px;
+  right: 1%;
+  top: 1%;
+}
+
+.bouton_acheteur {
+  padding: 20px;
+  color: rgb(250, 234, 114);
+  background-color: #da3737;
+  border-radius: 30px;
+}
+
+.bouton_acheteur:hover {
+  color: rgb(236, 221, 107);
+  background-color: #ce3636;
 }
 
 .btn-delete {
-    background-color: #d32f2f;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .btn-delete:hover {
-    background-color: #b71c1c;
+  background-color: #b71c1c;
 }
 
+/* ==========================================================================
+   7. SECTIONS DE MENUS ALIMENTAIRES
+   ========================================================================== */
+.menulaitier {
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 400px;
+}
+
+.viande_menu, .fruit_menu, .cereale_menu, .laitier_menu {
+  border-radius: 30px;
+  width: 500px;
+  height: 400px;
+  padding: 40px;
+}
+
+.viande_menu {
+  padding-left: 40%;
+  background-color: rgb(237, 162, 162);
+}
+
+.fruit_menu {
+  padding-right: 40%;
+  background-color: rgb(142, 231, 142);
+}
+
+.cereale_menu {
+  padding-left: 40%;
+  background-color: rgb(231, 231, 161);
+}
+
+.laitier_menu {
+  padding-right: 40%;
+  background-color: rgb(169, 213, 250);
+}
+
+/* ==========================================================================
+   8. DETAIL DES PRODUITS (POSITIONNEMENTS ABSOLUS)
+   ========================================================================== */
+.titre_produit {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 450px;
+}
+
+.description_produit_gauche, 
+.description_produit_droit {
+  font-size: 20px;
+  margin: 0;
+  width: 300px;
+  position: absolute;
+  z-index: 2;
+  color: rgb(63, 63, 63);
+}
+
+.description_produit_droit {
+  right: 25%;
+  top: 35%;
+}
+
+.description_produit_gauche {
+  left: 25%;
+  top: 35%;
+}
+
+/* ==========================================================================
+   9. MESSAGES DE RETOUR (ALERTES)
+   ========================================================================== */
 .message {
   min-height: 1.2rem;
   margin-top: 0.8rem;
   font-weight: bold;
 }
+
 .message.success {
   color: var(--success-text);
   background: var(--success-bg);
   padding: 0.75rem;
   border-radius: 10px;
 }
+
 .message.error {
   color: var(--error-text);
   background: var(--error-bg);
   padding: 0.75rem;
   border-radius: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

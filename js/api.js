@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8080/ords/supermarche'
+const BASE_URL = 'http://localhost:8080/ords/supermarche';
 
 
 async function handleResponse(response) {
