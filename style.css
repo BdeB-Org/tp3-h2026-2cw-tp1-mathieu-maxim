@@ -1,0 +1,234 @@
+.logo{
+    width: 800px ;
+    height: 250px;
+}
+
+.bienvenu_text {
+    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(255, 210, 210);
+    color: rgb(92, 92, 92);
+    margin-bottom: 30px;
+}
+
+
+
+
+.menulaitier{
+    border-radius: 30px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+}
+
+
+.viande_menu, .fruit_menu, .cereale_menu, .laitier_menu {
+    border-radius: 30px;
+    width: 500px;
+    height: 400px;
+   
+}
+
+.viande_menu{
+    padding: 40px;
+    padding-left: 40%;
+    background-color: rgb(237, 162, 162);
+
+}
+.fruit_menu{
+    padding: 40px;
+    padding-right: 40%;
+    background-color: rgb(142, 231, 142);
+
+}
+.cereale_menu{
+    padding: 40px;
+    padding-left: 40%;
+    background-color: rgb(231, 231, 161);
+
+}
+.laitier_menu{
+    padding: 40px;
+    padding-right: 40%;
+    background-color: rgb(169, 213, 250);
+
+    
+}
+
+
+.titre_produit {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    bottom: 450px;
+}
+
+.description_produit_gauche,.description_produit_droit {
+    font-size: 20px;
+    color: #333333;
+    margin: 0;
+    width: 300px;
+    position:absolute;
+    z-index: 2;
+    color: rgb(63, 63, 63);
+
+}
+
+.description_produit_droit {
+    right: 25%;
+    top: 35%;
+
+}
+.description_produit_gauche{
+    left: 25%;
+    top: 35%;
+}
+
+
+.titre_produit{
+    text-decoration: none;
+    font-weight: bold;
+    position:absolute;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.blabla {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
+
+.bouton_article{
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.bouton_voirmagasin{
+    padding: 30px;
+    color: rgb(250, 234, 114);
+    background-color: #ff4343;
+    border-radius: 30px;
+}
+.bouton_voirmagasin:hover{
+    color: rgb(236, 221, 107);
+    background-color: #e93c3c;
+}
+
+
+
+.bouton_acheteur1{
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    margin-bottom: 30px;
+    right: 1%;
+    top: 1%;
+    
+}
+
+.bouton_acheteur{
+    padding: 20px;
+    color: rgb(250, 234, 114);
+    background-color: #da3737;
+    border-radius: 30px;
+}
+.bouton_acheteur:hover{
+    color: rgb(236, 221, 107);
+    background-color: #ce3636;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.boite-principale{
+    max-width: 1200px;
+    margin: 60px auto ;
+    padding: 20px;
+    background-color: #feeeee;
+  }
+  
+  .boite_affichage{
+    padding: 25px;
+    margin-bottom:15px ;
+  }
+
+  input, button {
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  input{
+    padding: 10px 30%;
+  }
+  
+  button{
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: rgb(214, 91, 91);
+    color: rgb(255, 251, 204);
+    border: none;
+  }
+
+
+  button:hover { 
+    background-color: rgb(187, 79, 79);
+ }
+ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td{
+    padding: 10px;
+    border: none;;
+    text-align: left;
+   
+  }
+  
+  th{
+    background: #ffc5c5;
+  
+  }
+  .entre_chercher_actualiser{
+    display: flex;
+    gap: 10px;
+  }
+
+
+
+
+
+
