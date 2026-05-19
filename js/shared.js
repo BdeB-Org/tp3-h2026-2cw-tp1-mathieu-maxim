@@ -5,7 +5,7 @@ function setMessage(elementId, message, type = '') {
     if (type) el.classList.add(type);
     el.textContent = message;
   }
-  
+
   function formatArgent(value) {
     if (value === null || value === undefined || value === '') return '—';
     return new Intl.NumberFormat('fr-CA', {
@@ -13,7 +13,7 @@ function setMessage(elementId, message, type = '') {
       currency: 'CAD'
     }).format(Number(value));
   }
-  
+
   function escapeHtml(value) {
     if (value === null || value === undefined) return '—';
     return String(value)

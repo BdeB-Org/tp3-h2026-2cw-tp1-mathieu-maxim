@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./style.css">
     <style>
         body{
-            background-color: #ffffff;
+            background-color: rgb(255, 249, 249);
             margin: 0;
 
         }
@@ -26,8 +26,8 @@
             height: 100px;
             background-color: #6f2626;
             display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
+            justify-content: center;
+            align-items: center;
             margin: 0;
             margin-top: 30px;
         }
@@ -35,8 +35,88 @@
 </head>
 <body>
     <header>
+        
         <a href="./index.html"><img class="logo" src="./images/logo.png"></a>
+       
     </header>
-    
+    <div class="bienvenu_text">
+            <h2>Espace Gestion - Liste de nos acheteur</h2>
+            <p>Cette section affiche informations des acheteurs enregistrés dans le système</p>
+        </div>
+
+    <main class="container">
+    <section class="card">
+      <h2>Ajouter un acheteur</h2>
+      <form id="acheteur-form" class="form-grid">
+        <input type="text" id="client_nom" placeholder="Nom de l'acheteur" required />
+        <input type="email" id="client_email" placeholder="Courriel (ex: nom@email.com)" required />
+        <select id="client_TypeDeMembre" required>
+          <option value="" disabled selected>Choisir le type de membre</option>
+          <option value="Premium">Premium</option>
+          <option value="Régulier">Régulier</option>
+        </select>
+        <button type="submit">Ajouter</button>
+      </form>
+      <p id="acheteur-message" class="message"></p>
+    </section>
+
+    <section class="card">
+      <div class="toolbar">
+        <h2>Liste des acheteurs</h2>
+        <button id="reload-acheteurs">Actualiser</button>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Courriel</th>
+              <th>Type de membre</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="acheteurs-body">
+            <tr><td colspan="5">Chargement...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+ 
+   <script src="js/api.js"></script>
+  <script src="js/shared.js"></script>
+   <script src="js/acheteur.js"></script>
+  
+
+    <!-- <main>
+        <div class="bienvenu_text">
+            <h2>Espace Gestion - Liste de nos acheteur</h2>
+            <p>Cette section affiche informations des acheteurs enregistrés dans le système</p>
+        </div>
+        <div id="Liste-acheteur" class="contenu_gestion"></div>
+
+        <div class="conteneur_tableau">
+    <table id="table-acheteurs">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom de l'acheteur</th>
+                <th>Courriel</th>
+                <th>Type de membre</th>
+            </tr>
+        </thead>
+        <tbody id="tbody-acheteurs">
+            </tbody>
+    </table>
+        </div>
+        
+</main> -->
+
+
+     <!-- <footer>
+        <p style="color: white;">Maxim Chevtsov & Mathieu Pillot</p>
+    </footer> -->
 </body>
 </html>
