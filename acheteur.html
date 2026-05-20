@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <title>Liste d'acheteur</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <header>
+    <a href="./index.html"><img class="logo" src="./images/logo.png"></a>
+  </header>
+
+
+    <div class="bienvenu_text">
+            <h2>Espace Gestion - Liste de nos acheteur</h2>
+            <p>Cette section affiche informations des acheteurs enregistrés dans le système</p>
+    </div>
+
+    <main class="boite_principale">
+    <section class="boite_affichage">
+      <h2>Ajouter un acheteur</h2>
+      <form id="acheteur-form" class="ajouter_section">
+        <input class="ajouter_input"type="text" id="acheteur_nom" placeholder="Nom de l'acheteur" required />
+        <input class="ajouter_input"type="email" id="acheteur_email" placeholder="Courriel (ex: nom@email.com)" required />
+        <select class="ajouter_input"id="acheteur_TypeDeMembre" required>
+          <option value="" disabled selected>Choisir le type de membre</option>
+          <option value="Premium">Premium</option>
+          <option value="Régulier">Régulier</option>
+        </select>
+        <button class="bouton_ajouter"type="submit">Ajouter</button>
+      </form>
+      <p id="acheteur-message" class="message"></p>
+    </section>
+
+    <section class="boite_affichage">
+      <div>
+        <h2>Liste des acheteurs</h2>
+        <button id="actualiser-acheteurs">Actualiser</button>
+      </div>
+      
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Courriel</th>
+              <th>Type de membre</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="acheteurs-body">
+            <tr><td colspan="5">Chargement...</td></tr>
+          </tbody>
+        </table>
+      
+    </section>
+  </main>
+
+ 
+   <script src="js/api.js"></script>
+  <script src="js/shared.js"></script>
+   <script src="js/acheteur.js"></script>
+  
+</body>
+</html>

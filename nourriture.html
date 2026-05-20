@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <title>Liste de nourriture</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <header>
+        <a href="./index.html"><img class="logo" src="./images/logo.png"></a>
+        <a class="bouton_acheteur-position" href="./acheteur.html"><h2 class="bouton_acheteur">Nos acheteur</h2></a>
+    </header>
+
+    <main class="boite_principale">
+        <section class="boite_affichage">
+            <h2>Liste des aliments</h2>
+            <div class="entre_chercher_actualiser">
+              <input type="search" id="chercher-nourriture" placeholder="Chercher un produit ici!" />
+              <button id="actualiser-nourriture">Actualiser</button>
+          </div>
+
+
+          <div>
+            <table>
+              <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Prix</th>
+                    <th>Date d'arrivée</th>
+                    <th>Date d'expiration</th>
+                    <th>Quantité</th>
+                    <th>Origine</th>
+
+                </tr>
+              </thead>
+              
+              <tbody id="nourriture-body">
+                <tr>
+                  <td colspan="7">Chargement...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+
+    
+    <script src="/js/api.js"></script>
+    <script src="/js/shared.js"></script>
+    <script src="/js/nourriture.js"></script>
+</body>
+</html>

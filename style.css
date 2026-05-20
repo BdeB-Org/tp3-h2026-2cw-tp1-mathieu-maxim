@@ -1,0 +1,277 @@
+/* HTML */
+body{
+  background-color: #ffffff;
+  margin: 0;
+}
+header{
+  height: 235px;
+  background-color: #ff4343;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;  
+}
+footer{
+  width: 100%;
+  height: 100px;
+  background-color: #6f2626;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0;
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff; 
+  border: 2px solid #ffb3b3;
+}
+
+th {
+  background: rgb(255, 210, 210);
+  color: var(--primary-dark);
+  font-weight: bold;
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ffb3b3; 
+}
+
+td {
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+  border: 1px solid #f0c5c5;
+}
+
+input, button {
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+input{
+  padding: 10px 30%;
+}
+
+button{
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: rgb(214, 91, 91);
+  color: rgb(255, 251, 204);
+  border: none;
+}
+
+button:hover { 
+  background-color: rgb(187, 79, 79);
+}
+
+
+
+
+
+
+/*PAGE INDEX*/
+.logo {
+  width: 800px;
+  height: 250px;
+}
+
+.bouton_acheteur-position {
+  text-decoration: none;
+  font-weight: bold;
+  position: absolute;
+  margin-bottom: 30px;
+  right: 1%;
+  top: 1%;
+}
+
+.bouton_acheteur {
+  padding: 20px;
+  color: rgb(250, 234, 114);
+  background-color: #da3737;
+  border-radius: 30px;
+}
+
+.bouton_acheteur:hover {
+  color: rgb(236, 221, 107);
+  background-color: #ce3636;
+}
+
+.bienvenu_text {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(255, 210, 210);
+  color: rgb(92, 92, 92);
+  margin-bottom: 30px;
+}
+
+.bouton_article {
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.bouton_voirmagasin {
+  padding: 30px;
+  color: rgb(250, 234, 114);
+  background-color: #ff4343;
+  border-radius: 30px;
+}
+
+.bouton_voirmagasin:hover {
+  color: rgb(236, 221, 107);
+  background-color: #e93c3c;
+}
+
+.separation_alimentation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.titre_produit {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+  bottom: 430px;
+}
+
+.description_produit_gauche,.description_produit_droit {
+  font-size: 20px;
+  margin: 0;
+  width: 300px;
+  position: absolute;
+  z-index: 2;
+  color: rgb(63, 63, 63);
+}
+
+.description_produit_droit {
+  right: 25%;
+  top: 35%;
+}
+
+.description_produit_gauche {
+  left: 25%;
+  top: 35%;
+}
+
+.viande_menu, .fruit_menu, .cereale_menu, .laitier_menu {
+  border-radius: 30px;
+  width: 500px;
+  height: 400px;
+  padding: 40px;
+}
+
+.viande_menu {
+  padding-left: 40%;
+  background-color: rgb(237, 162, 162);
+}
+
+.fruit_menu {
+  
+  padding-right: 40%;
+  background-color: rgb(142, 231, 142);
+}
+
+.cereale_menu {
+  padding-left: 40%;
+  background-color: rgb(231, 231, 161);
+}
+
+.laitier_menu {
+  padding-right: 40%;
+  background-color: rgb(169, 213, 250);
+}
+
+
+
+
+
+/*PAGE NOURRITURE ET ACHETEUR */
+.boite_principale{
+  max-width: 1200px;
+  margin: 60px auto ;
+  padding: 20px;
+  background-color: #feeeee;
+}
+
+.boite_affichage{
+  padding: 25px;
+  margin-bottom:15px ;
+}
+
+
+
+
+
+/*PAGE NOURRITURE */
+.entre_chercher_actualiser {
+  display: flex;
+  gap: 10px;
+}
+
+
+
+
+
+/*PAGE ACHETEUR  */
+.ajouter_section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  
+}
+
+.ajouter_input{
+  padding: 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.bouton_ajouter{
+  padding: 10px 20px;
+  background-color: #ff4343;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bouton_ajouter:hover{
+  background-color: #e93c3c;
+}
+
+.message {
+  min-height: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.message.success {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.message.error {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
